@@ -1,0 +1,11 @@
+server:
+  port: 7001
+  servlet:
+    context-path: /sso-client
+
+cas:
+  client-host-url: http://192.168.100.54:${server.port}
+  server-url-prefix: http://192.168.100.54:8088/cas
+  server-login-url: ${cas.server-url-prefix}/login
+  validation-type: cas3
+  proxy-callback-url:
